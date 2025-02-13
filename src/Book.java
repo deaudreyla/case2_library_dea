@@ -1,15 +1,13 @@
 public class Book {
 	private String title;
 	private String isbn;
-	private String authorName;
-	private String biography;
+	private Author author;
 	private boolean avail = true;
 	
 	public Book(String title, String isbn, Author author){
 		this.title = title;
 		this.isbn = isbn;
-		authorName = author.getAuthorName();
-		biography = author.getBiography();
+		this.author = author;
 	}
 	
 	//getter
@@ -21,12 +19,8 @@ public class Book {
 		return isbn;
 	}
 	
-	public String getAuthorName() {
-		return authorName;
-	}
-	
-	public String getBiography() {
-		return biography;
+	public Author getAuthor() {
+		return author;
 	}
 	
 	public boolean getAvail() {
